@@ -1,7 +1,5 @@
 <?php
-  include './db/db.php';
-  include './db/use_db.php';
-  include './db/viewuser.inc.php';
+  require_once('./db/db.php');
 ?>
 
 <!doctype html>
@@ -15,9 +13,14 @@
    <script src="https://kit.fontawesome.com/1555de2a22.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <?php
-    $users = new ViewUser();
-    $users->showAllusers();
-  ?>
+  <p>
+    <?php
+      $database = new Database("localhost", "testuser", "safePassword", 
+      "myDatabase");
+      $query = "SELECT * FROM myDatabase";
+      $result = $database->query($query);
+      echo $result;
+    ?>
+  </p>
 </body>
 </html>
