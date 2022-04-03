@@ -1,0 +1,15 @@
+{
+    "name": "ko199/second",
+    "autoload": {
+        "psr-4": {
+            "Ko199\\Second\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Oleg",
+            "email": "neperate@gmail.com"
+        }
+    ],
+    "require": {}
+}
